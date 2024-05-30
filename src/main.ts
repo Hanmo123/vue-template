@@ -10,6 +10,10 @@ import router from "./router";
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
+const meta = document.createElement("meta");
+meta.name = "naive-ui-style";
+document.head.appendChild(meta);
+
 const app = createApp(App);
 
 app.use(pinia);
